@@ -101,14 +101,15 @@ router.post('/', [
             });
         }
 
-        const { title, description, priority, dueDate } = req.body;
+        const { title, description, priority, dueDate, completed } = req.body;
 
         const todo = new Todo({
             title,
             description,
             priority,
             dueDate: dueDate ? new Date(dueDate) : null,
-            user: req.user._id
+            user: req.user._id,
+            completed: completed !== undefined ? completed : false
         });
 
         await todo.save();

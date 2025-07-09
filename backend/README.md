@@ -241,4 +241,4 @@ You can test the API endpoints using tools like:
 
 ## License
 
-MIT 
+Mahasoft solutions
